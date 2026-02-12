@@ -55,7 +55,6 @@ public class HitungNilaiAkhir11 {
             } else {
                 System.out.print("SELAMAT ANDA LULUS");
             }
-
             System.out.println("=========================================");
             System.out.println("=========================================");
         }
