@@ -43,7 +43,6 @@ public class PlatNomor11 {
                 for (int j = 0; j < kota[i].length; j++) {
                     System.out.print(kota[i][j]);
                 }
-
                 System.out.println();
                 ditemukan = true;
                 break;
