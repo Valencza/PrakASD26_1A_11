@@ -1,18 +1,39 @@
-## Getting Started
+Repository ini berisi kumpulan tugas, latihan, dan proyek yang dikerjakan untuk memenuhi persyaratan Mata Kuliah **Algoritma dan Struktur Data**.
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+---
 
-## Folder Structure
+## 👤 Identitas Mahasiswa
 
-The workspace contains two folders by default, where:
+* **Nama**: *Garcia Fernanda Valenca Archadea*
+* **NIM**: *254107020175*
+* **Jurusan**: *Teknik Informatika*
+* **Program Studi (Prodi)**: *D-IV Teknik Informatika*
+* **Kelas**: *1A*
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+---
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+## 📚 Deskripsi Repository
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+Repository ini dibuat sebagai dokumentasi pengerjaan tugas-tugas berikut:
 
-## Dependency Management
+* Implementasi algoritma dasar
+* Struktur data
+* Penyelesaian studi kasus
+* Praktikum dan latihan kode
+* Project akhir mata kuliah
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+---
+
+## 🛠️ Teknologi yang Digunakan
+
+* Bahasa Pemrograman: **Java**
+* Tools: **VSCode**
+* Sistem Operasi: Windows / Linux
+
+---
+
+## 💡 Catatan
+
+Setiap tugas dalam repository ini merupakan hasil pengerjaan pribadi sebagai pemenuhan Mata Kuliah **Algoritma dan Struktur Data**.
+
+---
