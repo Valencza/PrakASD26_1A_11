@@ -1,4 +1,4 @@
-package P2;
+package P2.Percobaan1;
 
 public class Mahasiswa11 {
     String nama;
