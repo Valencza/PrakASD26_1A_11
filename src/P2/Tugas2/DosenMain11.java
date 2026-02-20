@@ -16,7 +16,9 @@ public class DosenMain11 {
         dosen1.ubahKeahlian("Praktek Algoritma dan Struktur Data");
 
         Dosen11 dosen2 = new Dosen11("D002", "Valen", true, 2025, "Sistem Operasi");
+
         dosen2.tampilInformasi();
+        
         dosen2.setStatusAktif(false);
         dosen2.hitungMasaKerja(2026);
         dosen2.ubahKeahlian("Praktek Sistem Operasi");
