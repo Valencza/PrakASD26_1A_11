@@ -12,4 +12,18 @@ public class Matakuliah11 {
         this.sks = sks;
         this.jumlahJam = jumlahJam;
     }
+    
+    public Matakuliah11(String kode, String nama) {
+        this.kode = kode;
+        this.nama = nama;
+        this.sks = 0;
+        this.jumlahJam = 0;
+    }
+
+    public Matakuliah11() {
+        this.kode = "XXX";
+        this.nama = "Belum Ditentukan";
+        this.sks = 0;
+        this.jumlahJam = 0;
+    }
 }
