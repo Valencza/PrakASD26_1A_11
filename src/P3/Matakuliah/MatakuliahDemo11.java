@@ -31,7 +31,7 @@ public class MatakuliahDemo11 {
             arrayOfMatakuliah[i] = new Matakuliah11();
             arrayOfMatakuliah[i].tambahData(kode, nama, sks, jumlahJam);
 
-            System.out.println("---------------------------");
+            System.out.println("================================");
         }
 
         for (int i = 0; i < jumlahMatkul; i++) {
