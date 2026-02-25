@@ -28,16 +28,24 @@ public class DosenDemo11 {
             kode = sc.nextLine();
             System.out.print("Masukkan Nama Dosen: ");
             nama = sc.nextLine();
-            System.out.print("Pilih jenis kelamin (L/P): ");
-            pilihan = sc.next().charAt(0);
-            jenisKelamin = (pilihan == 'L' || pilihan == 'l');
-            sc.nextLine();
 
-            if (jenisKelamin) {
-                System.out.println("Jenis Kelamin " + nama + " : Laki-laki");
-            } else {
-                System.out.println("Jenis Kelamin " + nama + " : Perempuan");
-            }
+            do {
+                System.out.print("Pilih jenis kelamin (L/P): ");
+                pilihan = sc.next().charAt(0);
+                if (pilihan == 'L' || pilihan == 'l'){
+                    jenisKelamin = true;
+                    System.out.println("Laki-laki");
+                    break;
+                } else if (pilihan == 'P' || pilihan == 'p') {
+                        jenisKelamin = false;
+                        System.out.println("Perempuan");
+                        break;
+                } else {
+                    System.out.println("Inputan tidak sesuai");
+                }
+            } while (true);
+
+            sc.nextLine();
 
             System.out.print("Masukkan usia: ");
             dummy = sc.nextLine();
@@ -48,11 +56,13 @@ public class DosenDemo11 {
             System.out.println("-----------------------------------");
         }
 
-        for (int i = 0; i < jumlahIndex; i++) {
+        int nomor = 1;
+        for (Dosen11 d : arrDosen) {
             System.out.println("------------------------------");
-            System.out.println("Data dosen ke-" + (i + 1));
+            System.out.println("Data dosen ke-" + nomor);
             System.out.println("------------------------------");
-            arrDosen[i].cetakData();
+            d.cetakData();
+            nomor++;
         }
 
         sc.close();

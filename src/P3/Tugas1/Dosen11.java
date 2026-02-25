@@ -16,7 +16,7 @@ public class Dosen11 {
     void cetakData(){
         System.out.println("Kode          :" + kode);
         System.out.println("Nama          :" + nama);
-        System.out.println("Jenis Kelamin :" + jenisKelamin);
+        System.out.println("Jenis Kelamin :" + (jenisKelamin ? "Laki Laki" : "Perempuan"));
         System.out.println("Usia          :" + usia + "tahun");
         System.out.println("------------------------------");
     }
