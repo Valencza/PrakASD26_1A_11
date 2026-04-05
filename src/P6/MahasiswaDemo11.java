@@ -44,5 +44,6 @@ public class MahasiswaDemo11 {
 
         System.out.println("\nData yang sudah terurut menggunakan Selection Sort (ASC):");
         list.tampil();
+        
     }
 }
