@@ -8,7 +8,6 @@ public class Mahasiswa11 {
 
     Mahasiswa11() {
     }
-    
 
     public Mahasiswa11(String nm, String name, String kls, double ip) {
         nim = nm;
