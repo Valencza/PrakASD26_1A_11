@@ -37,7 +37,12 @@ public class MahasiswaDemo11 {
 
         list.bubbleSort();
 
-        System.out.println("\nData setelah sorting (DESC):");
+        System.out.println("\nData yang sudah terurut menggunakan Bubble Sort (DESC):");
+        list.tampil();
+
+        list.selectionSort();
+
+        System.out.println("\nData yang sudah terurut menggunakan Selection Sort (ASC):");
         list.tampil();
     }
 }
