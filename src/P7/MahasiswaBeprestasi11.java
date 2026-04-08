@@ -1,8 +1,12 @@
 package P7;
 
 public class MahasiswaBeprestasi11 {
-    Mahasiswa11[] listMhs = new Mahasiswa11[5];
+    Mahasiswa11[] listMhs;
     int idx;
+
+    MahasiswaBeprestasi11(int jumlah) {
+        listMhs = new Mahasiswa11[jumlah];
+    }
 
     void tambah(Mahasiswa11 m) {
         if (idx < listMhs.length) {
@@ -90,14 +94,14 @@ public class MahasiswaBeprestasi11 {
 
     int findBinarySearch(double cari, int left, int right) {
         int mid;
-        if(right >= left) {
+        if (right >= left) {
             mid = (left + right) / 2;
-            if(cari == listMhs[mid].ipk) {
+            if (cari == listMhs[mid].ipk) {
                 return (mid);
             } else if (listMhs[mid].ipk < cari) {
-                return findBinarySearch(cari, left, mid-1);
+                return findBinarySearch(cari, left, mid - 1);
             } else {
-                return findBinarySearch(cari, mid+1, right);
+                return findBinarySearch(cari, mid + 1, right);
             }
         }
         return -1;
