@@ -82,6 +82,7 @@ public class Main11 {
                     }
                     break;
                 case 5:
+                    System.out.print("Masukkan NIM Mahasiswa: ");
                     String cari = sc.nextLine();
 
                     int left = 0;
@@ -100,10 +101,10 @@ public class Main11 {
                         } else {
                             right = mid - 1;
                         }
-                    }
 
-                    if (!ketemu) {
-                        System.out.println("Peminjam dengan NIM " + cari + " tidak ada");
+                        if (!ketemu) {
+                            System.out.println("Peminjam dengan NIM " + cari + " tidak ada");
+                        }
                     }
                     break;
                 case 0:
