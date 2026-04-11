@@ -95,16 +95,16 @@ public class Main11 {
                         if (pnjm[mid].mhs.nim.equals(cari)) {
                             pnjm[mid].hitungDenda();
                             pnjm[mid].tampilPeminjaman();
+                            ketemu = true;
                             break;
                         } else if (pnjm[mid].mhs.nim.compareTo(cari) < 0) {
                             left = mid + 1;
                         } else {
                             right = mid - 1;
                         }
-
-                        if (!ketemu) {
-                            System.out.println("Peminjam dengan NIM " + cari + " tidak ada");
-                        }
+                    }
+                    if (!ketemu) {
+                        System.out.println("Peminjam dengan NIM " + cari + " tidak ada");
                     }
                     break;
                 case 0:
