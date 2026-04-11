@@ -60,18 +60,24 @@ public class Main11 {
                     }
                     break;
                 case 4:
-                    for (int i = 0; i < pnjm.length - 1; i++) {
+                    for (int i = 0; i < pnjm.length; i++) {
+                        pnjm[i].hitungDenda();
+                    }
+
+                    for (int i = 0; i < pnjm.length; i++) {
                         int max = i;
                         for (int j = i + 1; j < pnjm.length; j++) {
-                            if (pnjm[j].denda > pnjm[max].denda)
-                                ;
-                            max = j;
+                            if (pnjm[j].denda > pnjm[max].denda) {
+                                max = j;
+                            }
                         }
                         Peminjaman11 temp = pnjm[max];
                         pnjm[max] = pnjm[i];
                         pnjm[i] = temp;
 
-                        pnjm[i].hitungDenda();
+                    }
+
+                    for (int i = 0; i < pnjm.length; i++) {
                         pnjm[i].tampilPeminjaman();
                     }
                     break;
