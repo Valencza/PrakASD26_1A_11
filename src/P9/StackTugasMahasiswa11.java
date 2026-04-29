@@ -28,8 +28,21 @@ public class StackTugasMahasiswa11 {
     }
 
     void push(Mahasiswa11 mhs) {
-        top++;
-        stack[top] = mhs;
+        if (!isFull()) {
+            top++;
+            stack[top] = mhs;
+        } else {
+            System.out.println("Stack Penuh! Tidak dapat menambahkan tugas lagi. ");
+        }
+    }
+
+    public Mahasiswa11 bottom() {
+        if (!isEmpty()) {
+            return stack[0];
+        } else {
+            System.out.println("Stack kosong! Tidak ada tugas yang dikumpulkan. ");
+            return null;
+        }
     }
 
     public Mahasiswa11 pop() {
