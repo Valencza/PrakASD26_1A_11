@@ -63,6 +63,16 @@ public class AntrianLayanan11 {
         }
     }
 
+    public void lihatTerakhir() {
+        if (isEmpty()) {
+            System.out.println("Antrian kosong.");
+        } else {
+            System.out.println("Mahasiswa terakhir: ");
+            System.out.println("NIM - NAMA - PRODI - KELAS");
+            data[rear].tampilkanData();
+        }
+    }
+
     public void tampilkanSemua() {
         if (isEmpty()) {
             System.out.println("Antrian kosong.");
@@ -72,7 +82,7 @@ public class AntrianLayanan11 {
         System.out.println("NIM - NAMA - PRODI - KELAS");
         for (int i = 0; i < size; i++) {
             int index = (front + i) % max;
-            System.out.println((i + 1) + ". ");
+            System.out.print((i + 1) + ". ");
             data[index].tampilkanData();
         }
     }
