@@ -1,7 +1,7 @@
 package P10;
 
 public class Queue11 {
-    int [] data;
+    int[] data;
     int front;
     int rear;
     int size;
@@ -33,10 +33,11 @@ public class Queue11 {
     public void enqueue(int dt) {
         if (isFull()) {
             System.out.println("Queue sudah penuh");
-        } 
-        else {
-            if (isEmpty()) {
-                front = rear = 0;
+            System.exit(0);
+        } else {
+            if (isFull()) {
+                System.out.println("Queue sudah penuh");
+                System.exit(0);
             } else {
                 if (rear == max - 1) {
                     rear = 0;
@@ -53,6 +54,7 @@ public class Queue11 {
         int dt = 0;
         if (isEmpty()) {
             System.out.println("Queue masih kosong");
+            System.exit(0);
         } else {
             dt = data[front];
             size--;
