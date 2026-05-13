@@ -100,7 +100,7 @@ public class DoubleLinkedList11 {
 
     public void print() {
         if (isEmpty()) {
-            System.out.println("Linked List masih kosong.");
+            System.out.println("Linked List masih kosong. ");
             return;
         }
 
