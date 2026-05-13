@@ -51,7 +51,7 @@ public class DoubleLinkedList11 {
 
         Node11 newNode = new Node11(data);
 
-        // Jika current adalah tail, node baru ditambahkan di akhir 
+        // Jika current adalah tail, node baru ditambahkan di akhir
         if (current == tail) {
             newNode.prev = current;
             current.next = newNode;
@@ -109,6 +109,20 @@ public class DoubleLinkedList11 {
         while (current != null) {
             current.data.tampil();
             current = current.next;
+        }
+    }
+
+    public void printReverse() {
+        if (isEmpty()) {
+            System.out.println("Linked List masih kosong");
+            return;
+        }
+
+        Node11 current = tail;
+
+        while (current != null) {
+            current.data.tampil();
+            current = current.prev;
         }
     }
 }
