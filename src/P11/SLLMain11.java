@@ -11,7 +11,7 @@ public class SLLMain11 {
         Mahasiswa11 mhs4 = new Mahasiswa11("126", "Archadea", "1A", 3.9);
 
         sll.print();
-        
+
         sll.addFirst(mhs4);
         sll.print();
 
@@ -21,6 +21,18 @@ public class SLLMain11 {
         sll.insertAfter("Archadea", mhs3);
         sll.insertAt(2, mhs2);
 
+        sll.print();
+
+        System.out.println("data Index 1: ");
+        sll.getData(1);
+
+        System.out.println("data mahasiswa an Valenca berada pada index: " + sll.indexOf("Valenca"));
+        System.out.println();
+
+        sll.removeFirst();
+        sll.removeLast();
+        sll.print();
+        sll.removeAt(0);
         sll.print();
     }
 }
