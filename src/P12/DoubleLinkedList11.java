@@ -66,6 +66,7 @@ public class DoubleLinkedList11 {
         System.out.println("Data berhasil disisipkan setelah NIM " + keyNim);
     }
 
+    
     public void removeFirst() {
         if (isEmpty()) {
             System.out.println("Linked List kosong.");
