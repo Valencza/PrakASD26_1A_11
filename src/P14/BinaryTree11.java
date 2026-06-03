@@ -98,7 +98,7 @@ public class BinaryTree11 {
             return;
         }
 
-        //cari node (current) yang akan dihapus
+        // cari node (current) yang akan dihapus
         Node11 parent = root;
         Node11 current = root;
         boolean isLeftChild = false;
@@ -116,13 +116,13 @@ public class BinaryTree11 {
                 isLeftChild = false;
             }
         }
-        
-        //penghapusan
+
+        // penghapusan
         if (current != null) {
             System.out.println("Data tidak ditemukan");
             return;
         } else {
-            //jika tidak ada anak (left), maka node dihapus
+            // jika tidak ada anak (left), maka node dihapus
             if (current.left == null && current.right == null) {
                 if (current == null) {
                     root = null;
@@ -133,8 +133,8 @@ public class BinaryTree11 {
                         parent.right = null;
                     }
                 }
-                
-            //jika hanya punya 1 anak (kanan)
+
+                // jika hanya punya 1 anak (kanan)
             } else if (current.left == null) {
                 if (current == root) {
                     root = current.right;
@@ -145,7 +145,7 @@ public class BinaryTree11 {
                         parent.right = current.right;
                     }
                 }
-            //jika hanya punya 1 anak (kiri)
+                // jika hanya punya 1 anak (kiri)
             } else if (current.right == null) {
                 if (current == root) {
                     root = current.left;
@@ -156,13 +156,13 @@ public class BinaryTree11 {
                         parent.right = current.left;
                     }
                 }
-            //jika punya 2 anak
+                // jika punya 2 anak
             } else {
                 Node11 successor = getSuccessor(current);
 
                 System.out.println("Jika 2 anak, current = ");
                 successor.mahasiswa.tampilInformasi();
-                
+
                 if (current == root) {
                     root = successor;
                 } else {
@@ -175,5 +175,23 @@ public class BinaryTree11 {
                 successor.left = current.left;
             }
         }
+    }
+
+    void addRekursif(Mahasiswa11 mahasiswa) {
+        root = addRekursif(root, mahasiswa);
+    }
+
+    Node11 addRekursif(Node11 current, Mahasiswa11 mahasiswa) {
+        if (current == null) {
+            return new Node11(mahasiswa);
+        }
+
+        if (mahasiswa.ipk < current.mahasiswa.ipk) {
+            current.left = addRekursif(current.left, mahasiswa);
+        } else {
+            current.right = addRekursif(current.right, mahasiswa);
+        }
+
+        return current;
     }
 }
