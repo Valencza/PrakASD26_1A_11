@@ -9,10 +9,7 @@ public class BinaryTreeMain11 {
         bst.add(new Mahasiswa11("244160185", "Candra", "C", 3.21));
         bst.add(new Mahasiswa11("244160220", "Dewi", "B", 3.54));
 
-        System.out.println("\n=== IPK Terkecil ===");
-        bst.cariMinIPK();
-
-        System.out.println("\n=== IPK Terbesar ===");
-        bst.cariMaxIPK();
+        System.out.println("\n=== Mahasiswa dengan IPK di atas 3.50 ===");
+        bst.tampilMahasiswaIPKdiAtas(3.50);
     }
 }
