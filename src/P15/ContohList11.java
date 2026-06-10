@@ -23,7 +23,7 @@ public class ContohList11 {
                 System.out.printf("Elemen 0: %d total elemen: %d elemen terakhir: %s\n",
                                 l.get(0), l.size(), l.get(l.size() - 1));
 
-                List<String> names = new LinkedList<>();
+                LinkedList<String> names = new LinkedList<>();
                 names.add("Noureen");
                 names.add("Akhleema");
                 names.add("Shannum");
