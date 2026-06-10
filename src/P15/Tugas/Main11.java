@@ -3,6 +3,8 @@ package P15.Tugas;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.LinkedList;
+import java.util.Queue;
 import java.util.Scanner;
 
 public class Main11 {
@@ -10,6 +12,7 @@ public class Main11 {
     static ArrayList<Mahasiswa11> daftarMhs = new ArrayList<>();
     static ArrayList<MataKuliah11> daftarMK = new ArrayList<>();
     static ArrayList<Nilai11> daftarNilai = new ArrayList<>();
+    static Queue<Mahasiswa11> antrianHapus = new LinkedList<>();
 
     static void isiDataAwal() {
 
@@ -146,6 +149,40 @@ public class Main11 {
         tampilNilai();
     }
 
+    static void hapusMahasiswa(Scanner sc) {
+
+        tampilMahasiswa();
+
+        System.out.print("\nMasukkan NIM mahasiswa yang akan dihapus : ");
+        String nim = sc.nextLine();
+
+        Mahasiswa11 mhsHapus = null;
+
+        for (Mahasiswa11 m : daftarMhs) {
+            if (m.nim.equals(nim)) {
+                mhsHapus = m;
+                break;
+            }
+        }
+
+        if (mhsHapus == null) {
+            System.out.println("Mahasiswa tidak ditemukan!");
+            return;
+        }
+
+        antrianHapus.offer(mhsHapus);
+
+        Mahasiswa11 diproses = antrianHapus.poll();
+
+        daftarMhs.remove(diproses);
+
+        daftarNilai.removeIf(n -> n.mahasiswa.nim.equals(diproses.nim));
+
+        System.out.println("\nData berhasil dihapus");
+        System.out.println("NIM  : " + diproses.nim);
+        System.out.println("Nama : " + diproses.nama);
+    }
+
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
@@ -163,7 +200,8 @@ public class Main11 {
             System.out.println("2. Tampil Nilai");
             System.out.println("3. Mencari Nilai Mahasiswa");
             System.out.println("4. Urut Data Nilai");
-            System.out.println("5. Keluar");
+            System.out.println("5. Hapus Mahasiswa (Queue)");
+            System.out.println("6. Keluar");
             System.out.print("Pilih : ");
             pilih = sc.nextInt();
             sc.nextLine();
@@ -187,6 +225,11 @@ public class Main11 {
                     break;
 
                 case 5:
+                    hapusMahasiswa(sc);
+                    tampilMahasiswa();
+                    break;
+
+                case 6:
                     System.out.println("Program selesai");
                     break;
 
@@ -194,6 +237,6 @@ public class Main11 {
                     System.out.println("Menu tidak tersedia");
             }
 
-        } while (pilih != 5);
+        } while (pilih != 6);
     }
 }
