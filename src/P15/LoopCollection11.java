@@ -12,6 +12,8 @@ public class LoopCollection11 {
         fruits.add("Leci");
         fruits.add("Salak");
 
+        fruits.set(fruits.size() - 1, "Strawberry");
+
         for (String fruit : fruits) {
             System.out.printf("%s ", fruit);
         }
