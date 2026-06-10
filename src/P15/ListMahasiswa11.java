@@ -2,6 +2,8 @@ package P15;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 public class ListMahasiswa11 {
@@ -35,6 +37,15 @@ public class ListMahasiswa11 {
         return -1;
     }
 
+    public int binarySearch(String nim) {
+        Collections.sort(mahasiswas, Comparator.comparing(m -> m.nim));
+
+        return Collections.binarySearch(
+                mahasiswas,
+                new Mahasiswa11(nim, "", ""),
+                Comparator.comparing(m -> m.nim));
+    }
+
     public static void main(String[] args) {
 
         ListMahasiswa11 lm = new ListMahasiswa11();
@@ -46,7 +57,7 @@ public class ListMahasiswa11 {
         lm.tambah(m1, m2, m3);
         lm.tampil();
 
-        lm.update(lm.linearSearch("201235"), new Mahasiswa11("201235", "Akhleema lela", "021xx2"));
+        lm.update(lm.binarySearch("201235"), new Mahasiswa11("201235", "Akhleema lela", "021xx2"));
         System.out.println("");
         lm.tampil();
     }
