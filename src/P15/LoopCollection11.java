@@ -1,5 +1,6 @@
 package P15;
 
+import java.util.Collections;
 import java.util.Iterator;
 import java.util.Stack;
 
@@ -14,13 +15,21 @@ public class LoopCollection11 {
 
         fruits.set(fruits.size() - 1, "Strawberry");
 
+        fruits.add("Mango");
+        fruits.add("Guava");
+        fruits.add("Avocado");
+
+        Collections.sort(fruits);
+
+        System.out.println(fruits);
+
         for (String fruit : fruits) {
             System.out.printf("%s ", fruit);
         }
 
         System.out.println("\n" + fruits.toString());
 
-        while(!fruits.empty()) {
+        while (!fruits.empty()) {
             System.out.printf("%s", fruits.pop());
         }
 
@@ -28,7 +37,7 @@ public class LoopCollection11 {
         fruits.push("Durian");
         System.out.println("");
 
-        for(Iterator<String> it = fruits.iterator(); it.hasNext();) {
+        for (Iterator<String> it = fruits.iterator(); it.hasNext();) {
             String fruit = it.next();
             System.out.printf("%s", fruit);
         }
@@ -41,7 +50,7 @@ public class LoopCollection11 {
 
         System.out.println("");
 
-        for(int i = 0; i < fruits.size(); i++) {
+        for (int i = 0; i < fruits.size(); i++) {
             System.out.printf("%s", fruits.get(i));
         }
     }
